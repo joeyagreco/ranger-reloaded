@@ -1,30 +1,29 @@
-# We need to create regular expressions to ensure that the input is correctly formatted.
+from prettytable import PrettyTable
 
 from service.NetworkService import NetworkService
 
 if __name__ == "__main__":
-    # s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    # s.connect(("8.8.8.8", 80))
-    # ip = s.getsockname()[0]
-    # s.close()
-    # print(ip)
+    logo = "                                 \n"
+    logo += " _ __ __ _ _ __   __ _  ___ _ __ \n"
+    logo += "| '__/ _` | '_ \ / _` |/ _ \ '__|\n"
+    logo += "| | | (_| | | | | (_| |  __/ |   \n"
+    logo += "|_|  \__,_|_| |_|\__, |\___|_|   \n"
+    logo += "          _       __/ |     _          _ \n"
+    logo += "         | |     |___/     | |        | |\n"
+    logo += " _ __ ___| | ___   __ _  __| | ___  __| |\n"
+    logo += "| '__/ _ \ |/ _ \ / _` |/ _` |/ _ \/ _` |\n"
+    logo += "| | |  __/ | (_) | (_| | (_| |  __/ (_| |\n"
+    logo += "|_|  \___|_|\___/ \__,_|\__,_|\___|\__,_|\n"
 
-    # devices = []
-    # for device in os.popen('arp -a'): devices.append(device)
-    # print(devices)
+    credits = "Created by joeyagreco"
 
-    # nds = NetworkService.getAllNetworkDevicesOnNetwork()
-    # print()
+    print(logo)
+    print(credits)
 
-    # print(NetworkService.getSubnetMaskOfNetwork())
+    devices = NetworkService.getAllDevices()
+    devices.sort(key=lambda x: int(x.ipAddress.split(".")[-1]))
 
-    # ip = ipaddress.ip_network('192.0.2.0/255.255.255.0')
-    # print(ip)
-
-    # print(NetworkService.hostIsAlive("192.168.1.17"))
-    # print(NetworkService.getIpAddress())
-    ds = NetworkService.getAllDevices()
-    for d in ds:
-        print(d)
-    #
-    # print(NetworkService.portIsAlive("192.168.1.17", 21))
+    table = PrettyTable(["IP Address", "Open Ports"])
+    for device in devices:
+        table.add_row([device.ipAddress, device.openPorts])
+    print(table)

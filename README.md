@@ -5,25 +5,25 @@ ports.
 
 ## Installation
 
-Clone the project.
+1. Clone the project.
 
 ```bash
 git clone https://github.com/joeyagreco/ranger-reloaded.git
 ```
 
-Change directory.
+2. Change your working directory.
 
 ```bash
 cd ranger-reloaded
 ```
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Ranger Reloaded.
+3. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Ranger Reloaded.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the script.
+4. Run the script.
 
 ```bash
 py app.py

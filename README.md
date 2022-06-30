@@ -1,6 +1,6 @@
 # Ranger Reloaded
 
-Ranger Reloaded is a Python library that can be used to scan alive hosts on your network and check for vulnerable open
+Ranger Reloaded is a Python script that can be used to scan alive hosts on your network and check for vulnerable open
 ports.
 
 ## Installation

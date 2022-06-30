@@ -5,10 +5,16 @@ ports.
 
 ## Installation
 
-Clone the project
+Clone the project.
 
 ```bash
 git clone https://github.com/joeyagreco/ranger-reloaded.git
+```
+
+Change directory.
+
+```bash
+cd ranger-reloaded
 ```
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Ranger Reloaded.

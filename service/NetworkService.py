@@ -5,6 +5,7 @@ import threading
 from ping3 import ping
 
 from model.Device import Device
+from util.Logger import Logger
 
 
 class NetworkService:
@@ -29,7 +30,9 @@ class NetworkService:
 
     @classmethod
     def getAllIpAddressesOnNetwork(cls) -> list[str]:
-        networkPortion = ".".join(cls.getIpAddress().split(".")[:3])
+        ipAddress = cls.getIpAddress()
+        Logger.logGrey(f"- Found device IP Address: {ipAddress}")
+        networkPortion = ".".join(ipAddress.split(".")[:3])
         return [f"{networkPortion}.{clientPortion}" for clientPortion in range(0, 256)]
 
     @classmethod
@@ -97,6 +100,8 @@ class NetworkService:
                 device_.openPorts.append(str(port_))
 
         aliveDevices = cls.getAllAliveDevices()
+        Logger.logGrey(f"- Found {len(aliveDevices)} alive devices")
+        Logger.logGrey(f"- Checking {len(ports)} ports on all devices")
         threads = list()
         for device in aliveDevices:
             for port in ports:
@@ -105,4 +110,6 @@ class NetworkService:
                 threads.append(thread)
             for thread in threads:
                 thread.join()
+        Logger.logGrey(f"- Found {sum([len(device.openPorts) for device in aliveDevices])} vulnerable ports open")
+
         return aliveDevices

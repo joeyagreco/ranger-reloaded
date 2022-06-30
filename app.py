@@ -21,6 +21,7 @@ if __name__ == "__main__":
 
     Logger.logRed(logo)
     Logger.logBlue(credits)
+    Logger.logGrey("\n")
 
     devices = NetworkService.getAllDevices()
     devices.sort(key=lambda x: int(x.ipAddress.split(".")[-1]))
@@ -29,4 +30,5 @@ if __name__ == "__main__":
     for device in devices:
         table.add_row([device.ipAddress, ", ".join(sorted(device.openPorts, key=lambda x: int(x)))])
 
+    Logger.logGrey("\n")
     Logger.logYellow(table)

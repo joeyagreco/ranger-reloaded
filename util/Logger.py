@@ -19,3 +19,8 @@ class Logger:
     def logYellow(text: str) -> None:
         yellowCode = "\x1b[38;5;226m"
         Logger.__log(text, yellowCode)
+
+    @staticmethod
+    def logGrey(text: str) -> None:
+        greyCode = "\x1b[38;21m"
+        Logger.__log(text, greyCode)

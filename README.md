@@ -29,6 +29,10 @@ pip install -r requirements.txt
 py app.py
 ```
 
+## Configuration
+
+To change the ports that are being scanned, simply update the list in the `app.properties` file.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

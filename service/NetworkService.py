@@ -5,6 +5,7 @@ import threading
 from ping3 import ping
 
 from model.Device import Device
+from util.ConfigReader import ConfigReader
 from util.Logger import Logger
 
 
@@ -68,32 +69,7 @@ class NetworkService:
 
     @classmethod
     def getAllDevices(cls) -> list[Device]:
-        ports = [20,
-                 21,
-                 22,
-                 23,
-                 25,
-                 53,
-                 69,
-                 80,
-                 81,
-                 110,
-                 135,
-                 137,
-                 139,
-                 145,
-                 443,
-                 445,
-                 1433,
-                 1434,
-                 1443,
-                 3306,
-                 3386,
-                 3389,
-                 5900,
-                 8080,
-                 8443,
-                 52106]
+        ports = ConfigReader.get("network", "ports", asType=list)
 
         def __updateDevice(device_: Device, port_: int) -> None:
             if cls.portIsAlive(device_.ipAddress, port_):
@@ -105,7 +81,7 @@ class NetworkService:
         threads = list()
         for device in aliveDevices:
             for port in ports:
-                thread = threading.Thread(target=__updateDevice, args=(device, port,))
+                thread = threading.Thread(target=__updateDevice, args=(device, int(port),))
                 thread.start()
                 threads.append(thread)
             for thread in threads:

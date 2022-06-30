@@ -1,8 +1,10 @@
 from prettytable import PrettyTable
 
 from service.NetworkService import NetworkService
+from util.Logger import Logger
 
 if __name__ == "__main__":
+
     logo = "                                 \n"
     logo += " _ __ __ _ _ __   __ _  ___ _ __ \n"
     logo += "| '__/ _` | '_ \ / _` |/ _ \ '__|\n"
@@ -17,8 +19,8 @@ if __name__ == "__main__":
 
     credits = "Created by joeyagreco"
 
-    print(logo)
-    print(credits)
+    Logger.logRed(logo)
+    Logger.logBlue(credits)
 
     devices = NetworkService.getAllDevices()
     devices.sort(key=lambda x: int(x.ipAddress.split(".")[-1]))
@@ -26,4 +28,5 @@ if __name__ == "__main__":
     table = PrettyTable(["IP Address", "Open Ports"])
     for device in devices:
         table.add_row([device.ipAddress, ", ".join(sorted(device.openPorts, key=lambda x: int(x)))])
-    print(table)
+
+    Logger.logYellow(table)

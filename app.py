@@ -25,5 +25,6 @@ if __name__ == "__main__":
 
     table = PrettyTable(["IP Address", "Open Ports"])
     for device in devices:
-        table.add_row([device.ipAddress, device.openPorts])
+        # get all open ports
+        table.add_row([device.ipAddress, ", ".join(device.openPorts)])
     print(table)

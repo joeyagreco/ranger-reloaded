@@ -5,22 +5,23 @@ from util.Logger import Logger
 
 if __name__ == "__main__":
 
-    logo = "                                 \n"
-    logo += " _ __ __ _ _ __   __ _  ___ _ __ \n"
-    logo += "| '__/ _` | '_ \ / _` |/ _ \ '__|\n"
-    logo += "| | | (_| | | | | (_| |  __/ |   \n"
-    logo += "|_|  \__,_|_| |_|\__, |\___|_|   \n"
-    logo += "          _       __/ |     _          _ \n"
-    logo += "         | |     |___/     | |        | |\n"
-    logo += " _ __ ___| | ___   __ _  __| | ___  __| |\n"
-    logo += "| '__/ _ \ |/ _ \ / _` |/ _` |/ _ \/ _` |\n"
-    logo += "| | |  __/ | (_) | (_| | (_| |  __/ (_| |\n"
-    logo += "|_|  \___|_|\___/ \__,_|\__,_|\___|\__,_|\n"
+    logo = """
+ _ __ __ _ _ __   __ _  ___ _ __ 
+| '__/ _` | '_ \ / _` |/ _ \ '__|
+| | | (_| | | | | (_| |  __/ |   
+|_|  \__,_|_| |_|\__, |\___|_|   
+          _       __/ |     _          _ 
+         | |     |___/     | |        | |
+ _ __ ___| | ___   __ _  __| | ___  __| |
+| '__/ _ \ |/ _ \ / _` |/ _` |/ _ \/ _` |
+| | |  __/ | (_) | (_| | (_| |  __/ (_| |
+|_|  \___|_|\___/ \__,_|\__,_|\___|\__,_|
+"""
 
-    credits = "Created by joeyagreco"
+    appCredits = "Created by joeyagreco"
 
     Logger.logRed(logo)
-    Logger.logBlue(credits)
+    Logger.logBlue(appCredits)
     Logger.logGrey("\n")
 
     devices = NetworkService.getAllDevices()

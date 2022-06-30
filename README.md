@@ -31,7 +31,7 @@ py app.py
 
 ## Configuration
 
-To change the ports that are being scanned, simply update the list in the `app.properties` file.
+To change the ports that are being scanned, simply update the `ports` list in the `app.properties` file.
 
 ## Contributing
 

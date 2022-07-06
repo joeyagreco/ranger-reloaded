@@ -3,6 +3,9 @@
 Ranger Reloaded is a Python script that can be used to scan alive hosts on your network and check for vulnerable open
 ports.
 
+![Demo Pic 1](demo/rr_1.png?raw=true)
+![Demo Pic 2](demo/rr_2.png?raw=true)
+
 ## Installation
 
 1. Clone the project.

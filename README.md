@@ -1,8 +1,6 @@
 <div align="center">
     <img src="img/ranger-reloaded-logo-outlined.png" alt="ranger reloaded logo" width="250"/>
 
-A Python library to extract word frequencies from files.
-
 </div>
 
 Ranger Reloaded is a Python script that can be used to scan alive hosts on your network and check for vulnerable open

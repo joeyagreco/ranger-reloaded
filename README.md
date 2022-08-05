@@ -1,10 +1,9 @@
 <div align="center">
     <img src="img/ranger-reloaded-logo-outlined.png" alt="ranger reloaded logo" width="350"/>
 
-</div>
-
 Ranger Reloaded is a Python script that can be used to scan alive hosts on your network and check for vulnerable open
 ports.
+</div>
 
 ![Demo Pic 1](img/rr_demo.png?raw=true)
 

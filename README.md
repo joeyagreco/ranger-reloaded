@@ -1,9 +1,14 @@
-# Ranger Reloaded
+<div align="center">
+    <img src="img/ranger-reloaded-logo.png" alt="wordfreak logo" width="250"/>
+
+A Python library to extract word frequencies from files.
+
+</div>
 
 Ranger Reloaded is a Python script that can be used to scan alive hosts on your network and check for vulnerable open
 ports.
 
-![Demo Pic 1](demo/rr_demo.png?raw=true)
+![Demo Pic 1](img/rr_demo.png?raw=true)
 
 ## Installation
 

@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="img/ranger-reloaded-logo-outlined.png" alt="ranger reloaded logo" width="250"/>
+    <img src="img/ranger-reloaded-logo-outlined.png" alt="ranger reloaded logo" width="350"/>
 
 </div>
 

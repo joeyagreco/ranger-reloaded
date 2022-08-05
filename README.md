@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="img/ranger-reloaded-logo.png" alt="wordfreak logo" width="250"/>
+    <img src="img/ranger-reloaded-logo.png" alt="ranger reloaded logo" width="250"/>
 
 A Python library to extract word frequencies from files.
 

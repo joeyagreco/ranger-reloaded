@@ -23,7 +23,7 @@ git clone https://github.com/joeyagreco/ranger-reloaded.git
 cd ranger-reloaded
 ```
 
-3. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Ranger Reloaded.
+3. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the dependencies.
 
 ```bash
 pip install -r requirements.txt

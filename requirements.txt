@@ -1,2 +1,2 @@
-prettytable~=3.3.0
+prettytable~=3.5.0
 ping3~=4.0.3

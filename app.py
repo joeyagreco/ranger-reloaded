@@ -18,7 +18,7 @@ if __name__ == "__main__":
 |_|  \___|_|\___/ \__,_|\__,_|\___|\__,_|
 """
 
-    appCredits = "Created by joeyagreco"
+    appCredits = "Created by Joey Greco"
 
     Logger.logRed(logo)
     Logger.logBlue(appCredits)
